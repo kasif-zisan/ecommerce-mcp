@@ -1,0 +1,1 @@
+Postgres MCP server to connect with inventory

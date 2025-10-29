@@ -1,0 +1,25 @@
+[build-system]
+requires = ["uv_build>=0.9.0"]
+build-backend = "uv_build"
+
+[project]
+name = "api-server"
+version = "0.1.0"
+description = "FakeStore API MCP Server - Fetch current product inventory data"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=1.15.0",
+    "smithery>=0.4.2",
+    "fastmcp>=2.0.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+dev = "smithery.cli.dev:main"
+playground = "smithery.cli.playground:main"
+
+[tool.smithery]
+server = "api_server.server:create_server"

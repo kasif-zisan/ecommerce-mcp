@@ -1,0 +1,1 @@
+MCP server to connect with API and get Latest Data.
